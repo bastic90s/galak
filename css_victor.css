@@ -1,0 +1,357 @@
+:root {
+    --negro1:#2d2d2d80;
+    --negro2:#1a1a1a80;
+    --negro_gris:#151517;
+    --blanco:#fff;
+    --verde:#18c66a;
+    --fondo_verde:#194e3280;
+    --letra:rgba(255, 0, 0, 0.751);
+    --h-blanco: rgba(255, 255, 255, 0.178);
+    --focus:rgba(255, 255, 255, 0.178);
+    --color-neutral-0:#0c0c0c;
+    --color-neutral-10:#171717;
+    --color-neutral-30:#a8a29e;
+    --color-neutral-40:#f5f5f5;
+    --facebook:#4267b4;
+    --morado:#7f37c9;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5% ;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(https://images3.alphacoders.com/133/1334603.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*------------BARRA DE NAVEGACION-------------------------*/
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.content{
+    background-color: var(--negro_gris);
+    min-height: 7rem;
+}
+
+.menu{
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 3rem;
+    color:var(--verde);
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.logo img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    
+    font-size: 1.6rem;
+    padding: 2rem;
+    color: var(--blanco);
+    display: block;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.menu .navbar ul li a:hover{
+    color: var(--verde);
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 3rem;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:768px){
+
+    .content{
+        min-height: 7rem;
+    }
+    .navbar{
+        border-top: 0.1rem solid var(--blanco);
+    }
+   
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--negro_gris);
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .logo img {
+        height: 5rem;
+        width:5rem;
+    }
+
+    
+    .logo img{
+        margin-left:2rem;
+    }
+    
+}
+/*-------video------------*/
+
+.video {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10rem;
+}
+
+/*----------------------------INFORMACION------------------------------------*/
+.grid {
+    display: grid;
+    gap: 2rem;
+    margin: 4rem;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.grid > div {
+    background-color: var(--negro2);
+    text-align: center;
+}
+
+.grid > div > img{
+    height: 35rem;
+    width: 30rem;
+}
+
+.grid > div > img:hover {
+    height: 36rem;
+    width: 30.5rem;
+    
+}
+
+.grid > div:hover {
+    display: block;
+    background-color: var(--negro1);
+}
+.card_body p,h1,a {
+    color: var(--blanco);
+}
+
+div:target {
+    background-color: var(--fondo_verde);
+}
+
+@media(max-width:768px){
+    .grid{
+        grid-template-columns: auto auto;
+    }
+}
+@media(max-width:768px){
+    .card1 {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .card4 {
+        grid-area: 3 / 1 / 3 / 3
+    }
+    .card7 {
+        grid-area: 5 / 1 / 5 / 3;
+    }
+    .card10 {
+        grid-area: 7 / 1 / 7 / 3;
+    }
+}
+/*------------------------FOOTER------------------------*/
+
+/*footer de la pagina */
+
+footer{
+    width: 100%;
+    color: var(--color-neutral-40);
+    font-size: 1.5rem;
+}
+
+.footer-link{
+    text-decoration: none;
+}
+
+#footer_content{
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#_
+
+#footer_social_media .footer-link:hover{
+    opacity: 0.8;
+}
+
+#instagram{
+    background: linear-gradient(var(--morado),#ff2992,#ff9807);
+}
+
+#facebook{
+    background-color: var(--facebook);
+}
+
+#whatsapp{
+    background: var(--verde);
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link{
+    color:var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link{
+    color:var(--morado);
+}
+
+#footer_subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+#footer_subscribe p{
+    color: var(--color-neutral-30);
+}
+
+#input_group{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group input:focus{
+    background-color: rgb(108, 47, 168);
+}
+
+#input_group{
+    background-color: var(--morado);
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover{
+    opacity: 0.8;
+}
+
+#footer_copyright{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width:768px){
+    #footer_content{
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem;
+    }
+
+}
+
+@media screen and (max-width:426px){
+    #footer_content{
+        grid-template-columns: repeat(1,1fr);
+        gap:2rem;
+    }
+
+}
